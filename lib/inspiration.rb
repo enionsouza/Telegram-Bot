@@ -17,15 +17,13 @@ class Inspiration
 
     23.times do |i|
       quotes = []
-      doc.css("##{i + 1} + ol > li", "##{i + 1} + div + ol > li", "##{i + 1} + p + ol > li").each do |link|
-        quotes << link.content
+      doc.css("##{i + 1} + ol > li", "##{i + 1} + div + ol > li", "##{i + 1} + p + ol > li").each do |quote|
+        quotes << quote.content
       end
       get_inspiration[doc.css("##{i + 1}").inner_html] = quotes
     end
 
-    Dir.mkdir('../src/') unless Dir.directory?('../src/')
+    Dir.mkdir('../src/') unless Dir.children('..').include? 'src'
     File.write('../src/inspiration.json', get_inspiration.to_json)
   end
 end
-
-
