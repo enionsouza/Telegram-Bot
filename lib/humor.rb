@@ -27,7 +27,7 @@ class Humor
     end
 
     get_jokes = {
-      'Dad jokes' => dad_jokes ,
+      'Dad jokes' => dad_jokes,
       'Short jokes' => short_jokes,
       'Image jokes' => img_jokes
     }

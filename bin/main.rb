@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# rubocop:disable Metrics/BlockLength
 
 require 'json'
 require 'telegram/bot'
@@ -48,3 +49,4 @@ Telegram::Bot::Client.run(CapstoneRobot.token) do |bot|
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
