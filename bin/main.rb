@@ -15,6 +15,14 @@ Telegram::Bot::Client.run(CapstoneRobot.token) do |bot|
     case message.text
     when '/start'
       bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name}")
+    when '/help', '/menu'
+      bot.api.send_message(
+        chat_id: message.chat.id,
+        text: "/inspire_me - Displays a menu for Inspiring Quotes Categories
+/amuse_me - Displays a menu for Jokes Categories
+/fortune_cookie - Presents a Inspiring Quote randomly selected
+/just_for_fun - Presents a Joke randomly selected"
+      )
     when '/fortune_cookie'
       bot.api.send_message(chat_id: message.chat.id, text: quotes[quotes.keys.sample].sample)
     when '/inspire_me'
