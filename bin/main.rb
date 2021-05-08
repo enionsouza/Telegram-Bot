@@ -9,8 +9,8 @@ require_relative '../lib/robot'
 
 # quotes = Inspiration.new.inspiration
 # jokes = Humor.new.humor
-quotes = JSON.parse(File.read('../src/inspiration.json'))
-jokes = JSON.parse(File.read('../src/humor.json'))
+quotes = JSON.parse(File.read('src/inspiration.json'))
+jokes = JSON.parse(File.read('src/humor.json'))
 
 Telegram::Bot::Client.run(CapstoneRobot.token) do |bot|
   bot.listen do |message|
