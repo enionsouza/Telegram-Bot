@@ -4,11 +4,13 @@
 require 'json'
 require 'telegram/bot'
 require_relative '../lib/robot'
-require_relative '../lib/inspiration'
-require_relative '../lib/humor'
+# require_relative '../lib/inspiration'
+# require_relative '../lib/humor'
 
-quotes = Inspiration.new.inspiration
-jokes = Humor.new.humor
+# quotes = Inspiration.new.inspiration
+# jokes = Humor.new.humor
+quotes = JSON.parse(File.read('../src/inspiration.json'))
+jokes = JSON.parse(File.read('../src/humor.json'))
 
 Telegram::Bot::Client.run(CapstoneRobot.token) do |bot|
   bot.listen do |message|
