@@ -31,7 +31,7 @@ class Humor
       'Short jokes' => short_jokes,
       'Image jokes' => img_jokes
     }
-    Dir.mkdir('../src/') unless Dir.children('..').include? 'src'
+    Dir.mkdir('../src/') unless Dir.children('..').include?('src')
     File.write('../src/humor.json', get_jokes.to_json)
   end
 end

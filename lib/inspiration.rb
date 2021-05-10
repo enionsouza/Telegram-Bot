@@ -23,7 +23,7 @@ class Inspiration
       get_inspiration[doc.css("##{i + 1}").inner_html] = quotes
     end
 
-    Dir.mkdir('../src/') unless Dir.children('..').include? 'src'
+    Dir.mkdir('../src/') unless Dir.children('..').include?('src')
     File.write('../src/inspiration.json', get_inspiration.to_json)
   end
 end
