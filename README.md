@@ -61,7 +61,8 @@ To run this project, you'll need to create your rob
 
 ### Usage and Deployment
 
-- To turn your Telegram Robot on, go to your `Telegram-Bot` directory, and either run `./bin/main.rb` or `ruby bin/main.rb`
+- Now that you're in `Telegram-Bot` directory, run `cd bin`
+- To turn your Telegram Robot on, either run `./main.rb` or `ruby main.rb`
 - Now go to your Telegram Robot and enter `/help`. The other available commands should appear on your screen, as the robot's response
 
 ## Author
