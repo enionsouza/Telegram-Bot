@@ -1,6 +1,7 @@
 *.gem
 *.rbc
 /.config
+/config/robot_token.txt
 /coverage/
 /InstalledFiles
 /pkg/
