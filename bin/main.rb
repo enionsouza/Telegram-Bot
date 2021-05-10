@@ -22,7 +22,8 @@ Telegram::Bot::Client.run(TOKEN) do |bot|
         chat_id: message.chat.id,
         parse_mode: 'HTML',
         text: "Hello, <strong>#{message.from.first_name}</strong>! I'm your inspiring robot!
-Please enter <strong>/help</strong> for more information!")
+Please enter <strong>/help</strong> for more information!"
+      )
     when '/describe'
       bot.api.send_message(
         chat_id: message.chat.id,
@@ -32,7 +33,8 @@ Please enter <strong>/help</strong> for more information!")
 Even saying one daily motivational quote in the mirror each more can make a huge impact on your day-to-day life.
 Additionally, keep in mind that old saying: <em>\"Laughter is the Best Medicine\"</em>.
 Laughter strengthens your immune system, diminishes pain, and protects you from the damaging effects of stress.
-<strong>So, let's keep our mood up!</strong>")
+<strong>So, let's keep our mood up!</strong>"
+      )
     when '/help', '/menu'
       bot.api.send_message(
         chat_id: message.chat.id,
