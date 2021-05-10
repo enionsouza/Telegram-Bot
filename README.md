@@ -65,6 +65,15 @@ To run this project, you'll need to create your rob
 - To turn your Telegram Robot on, either run `./main.rb` or `ruby main.rb`
 - Now go to your Telegram Robot and enter `/help`. The other available commands should appear on your screen, as the robot's response
 
+### About the quotes and jokes sources
+
+- For this project, the quotes and jokes were web scraped from the following pages:
+  - [Get Inspired: 200+ Motivational Quotes To Encourage Your Success](https://www.shopify.com/blog/motivational-quotes)
+  - [145 Best Dad Jokes That Will Have the Whole Family Laughing](https://www.countryliving.com/life/a27452412/best-dad-jokes/)
+  - [50 Funny Short Jokes That Guarantee a Laugh](https://bestlifeonline.com/funny-short-jokes/)
+  - [75 Short Jokes Anyone Can Remember](https://www.readersdigest.ca/culture/10-short-jokes-anyone-can-remember/)
+- The web scraping was automatically performed and, _for testing purposes_, you can also delete the directory named `src` along with all its content files. When `./main.rb` is run in the `bin` directory, new source files will be regenerated from the mentioned sources. You can also re-run the RSpec tests, for sanity check of the newly generated source files.
+
 ## Author
 
 👤 **Ênio Neves de Souza**
